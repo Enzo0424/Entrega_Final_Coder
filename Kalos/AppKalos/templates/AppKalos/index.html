@@ -1,0 +1,30 @@
+{% extends "AppKalos/padre.html" %}
+{% load static %}
+
+{% block header1 %} <h2 class="masthead-subheading mb-0"> Queremos verte bien </h2> {% endblock header1 %}
+
+{% block botonscroll %} <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Saber Mas</a>{% endblock botonscroll %}
+
+{% block section1 %}
+
+<!-- Content section 1-->
+<section id="scroll">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="p-5 text-center d-flex justify-content-center align-items-center"></div>
+            <div class="col-lg-6 order-lg-2">
+                   <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'AppKalos/assets/img/01.jpg' %}" alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Quienes somos</h2>
+                    <p>Somos un grupo de profesionales en constante formación con el prosito de cuidar la salud del cuerpo de nuestros pacientes y también crear habitos que disminuyan el riesgo de lesiones </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+
+{% endblock section1 %}
