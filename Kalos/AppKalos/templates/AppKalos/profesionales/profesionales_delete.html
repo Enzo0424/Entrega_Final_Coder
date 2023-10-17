@@ -1,0 +1,13 @@
+{% extends "AppKalos/padre.html" %}
+{% load static %}
+{% block title %}<title>Borrar Profesional</title> {% endblock title %}
+{% block header1 %} <h2 class="masthead-subheading mb-0"> Borrar Profesional </h2> {% endblock header1 %}
+{% block botonscroll %} {% endblock botonscroll %} 
+{% block section1 %}
+
+    <form method="post">{% csrf_token %}
+        ¿Estás seguro que deseas borrar el curso "{{ object }}"?
+        <input type="submit" value="Submit" />
+    </form>
+
+{% endblock section1 %}

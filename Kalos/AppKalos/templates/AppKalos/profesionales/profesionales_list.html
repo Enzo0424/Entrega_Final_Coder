@@ -1,0 +1,24 @@
+{% extends "AppKalos/padre.html" %}
+{% load static %}
+
+{% block title %}<title>Lista Profesional </title> {% endblock title %}
+{% block header1 %} <h2 class="masthead-subheading mb-0"> Lista Profesional </h2> {% endblock header1 %}
+
+{% block botonscroll %} 
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'Profesionales' %}"> Regresar </a>
+{% endblock botonscroll %} 
+
+{% block section1 %}
+    <h1> Listado de Profesionales</h1>    
+    <ul>
+        {% for profesional in object_list %}
+        <li> NOMBRE: {{ profesional.nombre }} - APELLIDO: {{ profesional.apellido }} - DNI: {{ profesional.dni }} - PROFESION: {{ profesional.profesion }}
+                
+                <a href="{% url 'DetailProf' profesional.id %}"> Ver </a>
+                <a href="{% url 'EditProf' profesional.id %}"> Editar </a>
+                <a href="{% url 'DeleteProf' profesional.id %}"> Borrar </a>
+        
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock section1 %}

@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('AppKalos/', include('AppKalos.urls')), #relacion URLs de la APP con la del proyecto
+    path('Acceso/', include('Acceso.urls')), #relacion URLs de la APP con la del proyecto
     
 ]

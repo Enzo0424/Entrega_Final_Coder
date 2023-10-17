@@ -3,12 +3,14 @@
 
 {% block header1 %} <h2 class="masthead-subheading mb-0"> Queremos verte bien </h2> {% endblock header1 %}
 
-{% block botonscroll %} <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Saber Mas</a>{% endblock botonscroll %}
+{% block botonscroll %} 
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'Login' %}">Volver a iniciar Sesión</a>
+{% endblock botonscroll %}
 
 {% block section1 %}
 
 <!-- Content section 1-->
-<h2>{{ mensaje }}</h2>
+<h2>Te has deslogueado</h2>
 <section id="scroll">
     <div class="container px-5">
         <div class="row gx-5 align-items-center">

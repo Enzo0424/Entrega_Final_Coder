@@ -1,0 +1,21 @@
+{% extends "AppKalos/padre.html" %}
+{% load static %}
+
+{% block title %}<title>Formulario Paciente</title> {% endblock title %}
+{% block header1 %} <h2 class="masthead-subheading mb-0"> Nuevo Paciente </h2> {% endblock header1 %}
+
+{% block botonscroll %} 
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'Pacientes' %}"> Regresar </a>
+{% endblock botonscroll %} 
+
+{% block section1 %}
+    <form action="" method="POST"> 
+        
+        {% csrf_token %}        
+        {{ form.as_table }}
+        
+        <input type="submit" value="Guardar">
+
+    </form>
+
+{% endblock section1 %}

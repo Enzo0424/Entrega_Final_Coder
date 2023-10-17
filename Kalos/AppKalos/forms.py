@@ -6,5 +6,8 @@ class PacienteFormulario(forms.Form):
     dni = forms.IntegerField()
     prestadora = forms.CharField(max_length=20)
     
-class BuscarPaciente(forms.Form):
+class ProfesionalFormulario(forms.Form):
+    nombre = forms.CharField(max_length=20)
+    apellido = forms.CharField(max_length=20)
     dni = forms.IntegerField()
+    profesion = forms.CharField(max_length=20)

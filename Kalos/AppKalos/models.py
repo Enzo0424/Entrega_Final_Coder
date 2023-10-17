@@ -8,5 +8,14 @@ class Pacientes (models.Model):
     prestadora = models.CharField(max_length=20)
     
     def __str__(self):
-        return f"Nombre: {self.nombre} - Apellido: {self.apellido} - DNI: {self.dni} - Prestadora: {self.prestadora}"
+        return f"ID: {self.id} - Nombre: {self.nombre} - Apellido: {self.apellido} - DNI: {self.dni} - Prestadora: {self.prestadora}"
+
+class Profesionales (models.Model):
+    nombre = models.CharField(max_length=20)
+    apellido = models.CharField(max_length=20)
+    dni = models.CharField(max_length=8, unique=True)
+    profesion = models.CharField(max_length=20)
+    
+    def __str__(self):
+        return f"ID: {self.id} - Nombre: {self.nombre} - Apellido: {self.apellido} - DNI: {self.dni} - profesion: {self.profesion}"
     

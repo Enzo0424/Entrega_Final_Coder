@@ -1,10 +1,10 @@
 {% extends "AppKalos/padre.html" %}
 {% load static %}
 
-{% block header1 %} <h2 class="masthead-subheading mb-0"> Pacientes </h2> {% endblock header1 %}
+{% block header1 %} <h2 class="masthead-subheading mb-0"> Profesionales </h2> {% endblock header1 %}
 {% block botonscroll %} 
-<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'List' %}">Ver Pacientes</a>
-<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'New' %}">Nuevo Paciente</a>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'ListProf' %}">Ver Profesionales</a>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'NewProf' %}">Nuevo Profesional</a>
 {% endblock botonscroll %}
 
 {% block section1 %}
