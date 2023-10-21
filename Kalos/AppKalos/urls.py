@@ -23,6 +23,7 @@ urlpatterns += [
     path('nuevosProf/', ProfesionalesCreateView.as_view(), name= 'NewProf'),
     path('editarProf/<pk>/', ProfesionalesUpdateView.as_view(), name='EditProf'),
     path('borrarProf/<int:pk>/', ProfesionalesDeleteView.as_view(), name='DeleteProf'),
+    
     ]
     
 urlpatterns += [

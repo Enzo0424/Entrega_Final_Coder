@@ -10,7 +10,7 @@
 {% block section1 %}
 <h1>Editar Perfil de {{ user }}</h1>
 
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
 <table>
     

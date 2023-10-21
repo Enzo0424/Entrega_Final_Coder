@@ -22,8 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('AppKalos/', include('AppKalos.urls')), #relacion URLs de la APP con la del proyecto
-    path('Acceso/', include('Acceso.urls')), #relacion URLs de la APP con la del proyecto
-    
+    path('Acceso/', include('Acceso.urls')), #relacion URLs de la APP con la del proyecto   
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
