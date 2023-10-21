@@ -29,8 +29,3 @@ urlpatterns += [
     path('login', login_request, name="Login"),
     path('register', register, name="Register"),
 ]
-         #CLASE 22 - Grabación en 1:17:44
-         
-         #(?P<...)le dice que van a pasar un primary key. SON Expresiones regulares.
-         
-         # <int:pk> --> se usa para indicar que el valor es el id o primary key. más simple que las expresiones regulares

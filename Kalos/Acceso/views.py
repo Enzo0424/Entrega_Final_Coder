@@ -9,6 +9,8 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login,logout,authenticate
 from Acceso.forms import UserRegisterForm, UserEditForm
 from django.contrib.auth.decorators import login_required
+from .models import Avatar
+
 
 def login_request(request):
     
@@ -60,16 +62,31 @@ def edit_profile(request):
             
             informacion = miFormulario.cleaned_data
             
-            user.email = informacion['email']
-            user.password1 = informacion['password1']
-            user.password2 = informacion['password2'] # Password 1 o 2???
-            user.first_name = informacion['first_name']
-            user.last_name = informacion['last_name']
-            user.save()
+            if informacion["password1"] != informacion["password2"]:
+                datos = {
+                    'first_name': user.first_name,
+                    'email':user.email
+                }
+                miFormulario = UserEditForm(initial=datos)
+            else:    
+                user.email = informacion['email']
+                user.set_password = informacion['password1']
+                user.first_name = informacion['first_name']
+                user.last_name = informacion['last_name']
+                
+                user.save()
             
-            return render(request, "AppKalos/index.html")
+                return render(request, "AppKalos/index.html")
     
     else:
-        miFormulario= UserEditForm(initial={'email': user.email})
+        datos = {
+            'first_name': user.first_name,
+            'last_name': user.last_name,
+            'email':user.email
+        }
+        
+        miFormulario= UserEditForm(initial=datos)
     
     return render(request, "Acceso/edit_profile.html", {"miFormulario":miFormulario, "user":user})
+
+
