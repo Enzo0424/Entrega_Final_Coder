@@ -1,0 +1,18 @@
+{% extends "AppKalos/padre.html" %}
+
+{% block title %}<title>Perfil de Usuario</title>{% endblock title %}
+{% block header1 %}<h2 class="masthead-subheading mb-0">Perfil de Usuario</h2>{% endblock header1 %}
+{% block botonscroll %} 
+{% endblock botonscroll %}
+{% block section1 %}
+<div class="container px-5">
+    <h1>Mi Perfil</h1>
+    <p><strong>Nombre:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    {% if user_avatar %}
+    <p><strong>Imagen:</strong></p>
+    <img src="{{ user_avatar }}" style="height: 100px; width: 100px;" alt="Avatar">
+    {% endif %}
+    <a href="{% url 'Edit_Profile' %}"> Editar Perfil </a>
+</div>
+{% endblock section1 %}

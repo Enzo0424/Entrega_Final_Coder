@@ -12,7 +12,7 @@
     <h1> Listado de Profesionales</h1>    
     <ul>
         {% for profesional in object_list %}
-        <li> NOMBRE: {{ profesional.nombre }} - APELLIDO: {{ profesional.apellido }} - DNI: {{ profesional.dni }} - PROFESION: {{ profesional.profesion }}
+        <li> {{ profesional.apellido }}, {{ profesional.nombre }} 
                 
                 <a href="{% url 'DetailProf' profesional.id %}"> Ver </a>
                 <a href="{% url 'EditProf' profesional.id %}"> Editar </a>

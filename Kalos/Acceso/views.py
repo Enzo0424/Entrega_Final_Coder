@@ -99,4 +99,9 @@ def edit_profile(request):
     
     return render(request, "Acceso/edit_profile.html", {"miFormulario":miFormulario, "user":usuario})
 
+@login_required
+def profile_view(request):
+    user = request.user
+    return render(request, 'Acceso/profile_view.html', {'user': user})
+
 

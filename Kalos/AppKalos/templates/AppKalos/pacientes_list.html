@@ -10,9 +10,10 @@
 
 {% block section1 %}
     <h1> Listado de Pacientes</h1>    
+    
     <ul>
         {% for paciente in object_list %}
-        <li> NOMBRE: {{ paciente.nombre }} - APELLIDO: {{ paciente.apellido }} - DNI: {{ paciente.dni }} - PRESTADORA: {{ paciente.prestadora }}
+        <li> {{ paciente.apellido }}, {{ paciente.nombre }} 
                 
                 <a href="{% url 'Detail' paciente.id %}"> Ver </a>
                 <a href="{% url 'Edit' paciente.id %}"> Editar </a>
