@@ -1,6 +1,10 @@
 # Kalos
 Kalos es un proyecto creado como parte de la preentrega del curso de Python en Coder House. Este proyecto consiste en una interfaz web que permite al personal administrativo de una empresa crear, visualizar y modificar bases de datos de la empresa. Está construido utilizando Bootstrap como base.
 
+## Comisión
+
+47770
+
 ## Instalación
 
 Sigue estos pasos para instalar y ejecutar Kalos en tu entorno local:
@@ -26,7 +30,7 @@ python manage.py runserver
 
 
 2. Abre tu navegador web y accede a la siguiente URL:
-http://127.0.0.1:8000/AppKalos/Inicio/
+http://127.0.0.1:8000/AppKalos/
 
 3. Navega por las secciones en la barra de navegación:
 
@@ -40,18 +44,27 @@ http://127.0.0.1:8000/AppKalos/Inicio/
   - Buscar Profesional por profesión
   - Cargar Profesional nuevo
 
-- **Consultorios**:
-  - Ver consultorios actuales
-  - Cargar nuevo consultorio
+- **Cuenta**:
+  - Si no estás loggeado:
+    - Crear Cuenta
+    - Iniciar Sesión
+  - Si estás loggeado:
+    - Ver Perfil
+      - Editar Perfil
+      - Cambiar la contraseña
+    - Cerrar Sesión
 
-- **Tratamientos**:
-  - Crear tratamiento nuevo
+- **Acerca de mi**:
+  - Conocer al autor del proyecto
+
+- **Ir Arriba**:
+  - Scroller hacia arriba de la pagina
 
 ## Contribución
 
 Por el momento, no se aceptan contribuciones al proyecto.
 
-## Autores
+## Autor
 
 - Enzo Locatelli
 

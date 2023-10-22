@@ -34,5 +34,5 @@ class ProfesionalesUpdateView (LoginRequiredMixin,UpdateView):
     
 class ProfesionalesDeleteView (LoginRequiredMixin,DeleteView):
      model = Profesionales
-     success_url = reverse_lazy("List") 
+     success_url = reverse_lazy("ListProf") 
      template_name = "AppKalos/profesionales/profesionales_delete.html" #Ver, no iría

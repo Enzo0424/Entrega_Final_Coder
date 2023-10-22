@@ -1,11 +1,16 @@
 from django.urls import path, re_path
-from AppKalos.views_pacientes import Inicio, PacientesInicio, PacientesCreateView, PacientesDeleteView, PacientesDetailView,PacientesListView,PacientesUpdateView
+from AppKalos.views_pacientes import PacientesInicio, PacientesCreateView, PacientesDeleteView, PacientesDetailView,PacientesListView,PacientesUpdateView
 from AppKalos.views_profesionales import ProfesionalesInicio, ProfesionalesListView, ProfesionalesCreateView, ProfesionalesDeleteView,ProfesionalesDetailView,ProfesionalesUpdateView
+from AppKalos.views import Inicio, About
 from Acceso.views import login_request, register
 
-urlpatterns = [
 
+urlpatterns=[
     path('', Inicio.as_view(), name='Inicio'),
+    path('about', About.as_view(), name='About'),
+]
+
+urlpatterns += [
     path('pacientes/', PacientesInicio.as_view(), name='Pacientes'),
     path('list/', PacientesListView.as_view(), name='List'),
     path('detalle/<int:pk>/', PacientesDetailView.as_view(), name='Detail'),

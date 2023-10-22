@@ -9,9 +9,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
-class Inicio(ListView):
-    model = Pacientes
-    template_name = "AppKalos/index.html"
+#class Inicio(ListView):
+#    model = Pacientes
+#    template_name = "AppKalos/index.html"
 
 class PacientesInicio(LoginRequiredMixin,ListView):
     model = Pacientes

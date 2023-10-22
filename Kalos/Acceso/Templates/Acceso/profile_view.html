@@ -13,6 +13,7 @@
     <p><strong>Imagen:</strong></p>
     <img src="{{ user_avatar }}" style="height: 100px; width: 100px;" alt="Avatar">
     {% endif %}
-    <a href="{% url 'Edit_Profile' %}"> Editar Perfil </a>
+    <li><a href="{% url 'Edit_Profile' %}"> Editar Perfil </a></li>
+    <li><a href="{% url 'change_password' %}"> Cambiar Contraseña </a></li>
 </div>
 {% endblock section1 %}

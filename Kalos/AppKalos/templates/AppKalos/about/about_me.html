@@ -1,0 +1,40 @@
+{% extends "AppKalos/padre.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Acerca de mí - Kalos</title>
+{% endblock title %}
+
+{% block header1 %}
+    <h2 class="masthead-subheading mb-0">Acerca de mí</h2>
+{% endblock header1 %}
+
+{% block section1 %}
+    <!-- Contenido de la página "Acerca de mí" -->
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle" src="{% static 'AppKalos/assets/img/me.jpg' %}" alt="Mi imagen" />
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Enzo Locatelli</h2>
+                        <p>
+                            ¡Hola! Soy Enzo Locatelli, un apasionado de la tecnología y el marketing con 34 años de edad. Mi formación en marketing me ha llevado a trabajar en una compañía multinacional líder en la producción y comercialización de bebidas gaseosas. Actualmente, resido en la hermosa ciudad de Rosario, en la provincia de Santa Fe.
+                        </p>
+                        <p>
+                            Mi enfoque se centra en la búsqueda constante de aprendizaje y desarrollo de habilidades. Disfruto explorar nuevas tecnologías y me emociona la posibilidad de implementar automatizaciones a través de la programación, con el objetivo de mejorar la productividad y trazabilidad en mi compañía y en colaboración con amigos profesionales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+{% endblock section1 %}
+
+{% block botonscroll %}
+{% endblock botonscroll %}

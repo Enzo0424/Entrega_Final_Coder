@@ -1,7 +1,12 @@
 {% extends "AppKalos/padre.html" %}
 {% load static %}
 
-{% block header1 %} <h2 class="masthead-subheading mb-0"> Queremos verte bien </h2> {% endblock header1 %}
+{% block header1 %} 
+<h2> Inicia Sesión </h2> 
+<h2> o </h2> 
+<h2> Crea una Cuenta </h2> 
+
+{% endblock header1 %}
 
 {% block botonscroll %} 
 
@@ -14,13 +19,12 @@
     <form action="" method="POST">
 
         {% csrf_token %}
-        {{form.as_p}}
-
-        <button type="Submit"> Iniciar Sesión </button>
+        {{form.as_table}}
     
+        <button type="Submit"> Iniciar Sesión </button>
     </form>
-
-    <a href="{% url 'Register' %}"> Crear Cuenta </a>
+    
+    <button> <a href="{% url 'Register' %}"> Crear Cuenta </a> </button>
 </body>
 
 {% endblock section1 %}
